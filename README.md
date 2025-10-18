@@ -1,5 +1,10 @@
 # Hourglass Widget
 
+![](https://github.com/Sewmina7/hourglass_widget/preview.gif)
+
+Github: https://github.com/Sewmina7/hourglass_widget
+Pub.dev: https://pub.dev/packages/hourglass_widget
+
 A beautiful painted hourglass widget for Flutter with customizable colors and gradients.
 
 ## Features
@@ -8,7 +13,7 @@ A beautiful painted hourglass widget for Flutter with customizable colors and gr
 - ⏱️ Animated fill amount (0.0 to 1.0)
 - 📱 Responsive sizing
 - 🎯 Smooth animations with CustomPainter
-- 🔧 Easy to integrate
+- 🔧 Easy to integrate 
 
 ## Installation
 

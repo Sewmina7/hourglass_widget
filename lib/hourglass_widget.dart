@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 /// A custom painter that draws an animated hourglass with customizable colors and gradients.
 class HourglassPainter extends CustomPainter {
