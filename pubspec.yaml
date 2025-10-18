@@ -1,6 +1,6 @@
 name: hourglass_widget
 description: "A beautiful painted hourglass widget for Flutter with customizable colors and gradients."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Sewmina7/hourglass_widget
 
 environment:

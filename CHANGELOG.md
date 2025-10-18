@@ -5,3 +5,7 @@
 * Added `HourglassPainter` custom painter for rendering the hourglass
 * Included comprehensive example app demonstrating animated and static hourglass usage
 * Added unit tests for widget functionality
+
+
+## 0.0.2
+* Changed Readme and cleaned the code
