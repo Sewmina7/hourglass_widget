@@ -1,6 +1,6 @@
 # Hourglass Widget
 
-![](https://github.com/Sewmina7/hourglass_widget/preview.gif)
+![](https://github.com/Sewmina7/hourglass_widget/blob/master/preview.gif)
 
 Github: https://github.com/Sewmina7/hourglass_widget
 Pub.dev: https://pub.dev/packages/hourglass_widget
