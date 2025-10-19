@@ -1,7 +1,7 @@
 # Hourglass Widget
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sewmina7/hourglass_widget/47923001a8bf1f13d64349d3267981f15bf42603/preview.gif" height="400" alt="Flutter Favorite" />
+  <img src="https://raw.githubusercontent.com/Sewmina7/hourglass_widget/47923001a8bf1f13d64349d3267981f15bf42603/preview.gif" height="600" alt="Flutter Favorite" />
 </p>
 Github: https://github.com/Sewmina7/hourglass_widget
 Pub.dev: https://pub.dev/packages/hourglass_widget
