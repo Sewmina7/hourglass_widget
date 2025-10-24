@@ -2,7 +2,7 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-#include "include/hourglass/hourglass_plugin.h"
+#include "include/hourglass_widget/hourglass_plugin.h"
 #include "hourglass_plugin_private.h"
 
 // This demonstrates a simple unit test of the C portion of this plugin's

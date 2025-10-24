@@ -80,6 +80,18 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                 children: [
                   Column(
                     children: [
+                      const Text('0% Full'),
+                      Hourglass(
+                        fillAmount: 0,
+                        width: 80,
+                        height: 120,
+                        colors: const [Colors.purple, Colors.pink],
+                        colorStops: const [0.0, 1.0],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
                       const Text('25% Full'),
                       Hourglass(
                         fillAmount: 0.25,
@@ -110,6 +122,30 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
                         width: 80,
                         height: 120,
                         colors: const [Colors.teal, Colors.cyan],
+                        colorStops: const [0.0, 1.0],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Text('85% Full'),
+                      Hourglass(
+                        fillAmount: 0.85,
+                        width: 80,
+                        height: 120,
+                        colors: const [Colors.purple, Colors.pink],
+                        colorStops: const [0.0, 1.0],
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Text('100% Full'),
+                      Hourglass(
+                        fillAmount: 1.0,
+                        width: 80,
+                        height: 120,
+                        colors: const [Colors.purple, Colors.pink],
                         colorStops: const [0.0, 1.0],
                       ),
                     ],

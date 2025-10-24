@@ -1,4 +1,4 @@
-#include "include/hourglass/hourglass_plugin.h"
+#include "include/hourglass_widget/hourglass_plugin.h"
 
 #include <flutter_linux/flutter_linux.h>
 #include <gtk/gtk.h>

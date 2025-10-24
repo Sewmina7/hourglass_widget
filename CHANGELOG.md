@@ -9,3 +9,9 @@
 
 ## 0.0.2
 * Changed Readme and cleaned the code
+
+## 0.0.3
+* Added Image to pub.dev Readme
+
+## 0.0.4
+* Fixed the issue where sand won't fall all the way down.

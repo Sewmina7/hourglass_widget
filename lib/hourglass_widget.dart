@@ -24,7 +24,7 @@ class HourglassPainter extends CustomPainter {
     final outlinePainter = Paint()
       ..color = Colors.orangeAccent
       ..strokeCap = StrokeCap.round
-      ..strokeWidth = 5
+      ..strokeWidth = 6
       ..style = PaintingStyle.stroke;
       
     final outlinePainter2 = Paint()
@@ -58,12 +58,21 @@ class HourglassPainter extends CustomPainter {
     outline.close();
 
     final topContent = Path();
-    double topStartHeight = size.height * (0.4 - ((1 - fillAmount) * 0.3));
+    double topStartHeight = size.height * (0.48 - ((1 - fillAmount) * 0.4));
     double topEndHeight = size.height * 0.48;
-    double topContentStartWidthOffset =
+    double _topContentStartWidthOffset =
         getTopContentWidthOffset(size.width, topStartHeight, hourglassHalfHeight, hourglassInset);
-    double topContentEndWidthOffset =
+    double _topContentEndWidthOffset =
         getTopContentWidthOffset(size.width, topEndHeight, hourglassHalfHeight, hourglassInset);
+
+
+    double topContentStartWidthOffset = _topContentStartWidthOffset +2;
+    double topContentEndWidthOffset = _topContentEndWidthOffset;  
+    if(fillAmount > 0.8){
+      double fillAmountDifference = (fillAmount - 0.8) * 1.5;
+      topContentStartWidthOffset = _topContentStartWidthOffset * (1+fillAmountDifference); 
+      topContentEndWidthOffset = getTopContentWidthOffset(size.width, topEndHeight, hourglassHalfHeight, hourglassInset);
+    }
 
     topContent.moveTo(topContentStartWidthOffset, topStartHeight);
     topContent.arcToPoint(Offset(hourglassInset + topContentEndWidthOffset, topEndHeight),
@@ -93,12 +102,12 @@ class HourglassPainter extends CustomPainter {
     bottomContent.close();
 
     final fallingSand = Path();
-    fallingSand.moveTo(size.width * 0.4, (size.height * 0.48));
+    fallingSand.moveTo(size.width * 0.45, (size.height * 0.45));
     fallingSand.arcToPoint(Offset(size.width * 0.495, (size.height * 0.57)));
     fallingSand.lineTo(size.width * 0.48, size.height - hourglassInset);
     fallingSand.lineTo(size.width * 0.52, size.height - hourglassInset);
     fallingSand.arcToPoint(Offset(size.width * 0.505, (size.height * 0.57)));
-    fallingSand.arcToPoint(Offset(size.width * 0.6, (size.height * 0.48)));
+    fallingSand.arcToPoint(Offset(size.width * 0.55, (size.height * 0.45)));
     fallingSand.close();
 
     final gradient = ui.Gradient.linear(
