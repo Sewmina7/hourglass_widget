@@ -15,3 +15,6 @@
 
 ## 0.0.4
 * Fixed the issue where sand won't fall all the way down.
+
+## 0.0.5
+* Fixed the bottom left corner not being parallel

@@ -40,15 +40,15 @@ class HourglassPainter extends CustomPainter {
 
     final outline = Path();
 
-    outline.moveTo(hourglassInset, hourglassInset);
-    outline.arcToPoint(Offset(size.width - hourglassInset, hourglassInset));
+    outline.moveTo(hourglassInset, 11);
+    outline.arcToPoint(Offset(size.width - hourglassInset, 11));
     outline.arcToPoint(Offset(size.width * 0.6, size.height * 0.45),
         radius: Radius.circular(hourglassCurve), clockwise: true);
     outline.arcToPoint(Offset(size.width * 0.55, size.height * 0.55),
         radius: Radius.circular(20), clockwise: false);
-    outline.arcToPoint(Offset(size.width - hourglassInset, size.height - 10),
+    outline.arcToPoint(Offset(size.width - hourglassInset, size.height -10),
         radius: Radius.circular(hourglassCurve), clockwise: true);
-    outline.arcToPoint(Offset(hourglassInset, size.height - hourglassInset));
+    outline.arcToPoint(Offset(hourglassInset, size.height - 10));
     outline.arcToPoint(Offset(size.width * 0.45, size.height * 0.55),
         radius: Radius.circular(hourglassCurve), clockwise: true);
     outline.arcToPoint(Offset(size.width * 0.4, size.height * 0.45),
@@ -84,7 +84,8 @@ class HourglassPainter extends CustomPainter {
 
     final bottomContent = Path();
     double bottomStartHeight = size.height - 12;
-    double bottomEndHeight = size.height * (0.95 - (fillAmount * 0.32));
+    double clampedFillAmount = fillAmount.clamp(0.1, 1.0);
+    double bottomEndHeight = size.height * (0.95 - (clampedFillAmount * 0.32));
     double bottomContentStartWidthOffset = getBottomContentWidthOffset(
         size.width, bottomStartHeight, hourglassHalfHeight, hourglassInset);
     double bottomContentEndWidthOffset = getBottomContentWidthOffset(
@@ -95,7 +96,7 @@ class HourglassPainter extends CustomPainter {
         radius: Radius.circular(hourglassCurve), clockwise: true);
     bottomContent.arcToPoint(Offset(size.width / 2, bottomEndHeight - size.height * 0.02),
         radius: Radius.circular(hourglassCurve * 1.5));
-    bottomContent.arcToPoint(Offset((size.width - hourglassInset) - bottomContentEndWidthOffset, bottomEndHeight),
+      bottomContent.arcToPoint(Offset((size.width - hourglassInset) - bottomContentEndWidthOffset, bottomEndHeight),
         radius: Radius.circular(hourglassCurve * 1.5));
     bottomContent.arcToPoint(Offset(size.width - bottomContentStartWidthOffset, bottomStartHeight),
         radius: Radius.circular(hourglassCurve), clockwise: true);
